@@ -20,13 +20,14 @@ namespace GADE6122_Part_1_Marco_st10037536
             NoMovement
         }
 
-        public Tile[] TileSight = new Tile[4];
+        public Tile[] TileSight;
 
         public Character(int x, int y, int hp, int maxHp, int dmg) : base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
             this.dmg = dmg;
+            TileSight = new Tile[4];
         }
         public int Damage
         {

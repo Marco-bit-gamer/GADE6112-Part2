@@ -15,8 +15,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)
         {
-            if (TileSight[(int)move] is EmptyTile) return move;
-            return MovementEnum.NoMovement;
+            return (TileSight[(int)move].Type == TileType.EmptyTile) ? move : MovementEnum.NoMovement;
         }
 
         public override string ToString()

@@ -130,8 +130,6 @@ namespace GADE6122_Part_1_Marco_st10037536
                         case Swamp_Creature:
                             mapStr += SWAMP_CREATURE;
                             break;
-                        default:
-                            break;
                     }
                     mapStr += " ";
                 }
