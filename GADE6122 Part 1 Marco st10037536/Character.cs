@@ -71,21 +71,42 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public virtual void Attack(Character target)
         {
-
+            target.hp -= this.dmg;
         }
 
         public virtual bool CheckRange(Character target)
         {
             if (DistanceTo(target) > 1)
+            {
+                return false;
+            }
+            else return true;
         }
 
         private int DistanceTo(Character target)
         {
             return Math.Abs(this.X - target.X) + Math.Abs((this.Y - target.Y));
         }
-
+        
         public void Move(MovementEnum move)
         {
+            switch (move)
+            {
+                case MovementEnum.Up:
+                    this.Y -= 1;
+                    break;
+                case MovementEnum.Down:
+                    this.Y += 1;
+                    break;
+                case MovementEnum.Left:
+                    this.X -= 1;
+                    break;
+                case MovementEnum.Right:
+                    this.X += 1;
+                    break;
+                default:
+                    break;
+            }
         }
 
         public abstract MovementEnum ReturnMove(MovementEnum move = 0);
