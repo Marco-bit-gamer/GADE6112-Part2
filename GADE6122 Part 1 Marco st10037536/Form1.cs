@@ -34,19 +34,28 @@ namespace GADE6122_Part_1_Marco_st10037536
         private void btnUp_Click(object sender, EventArgs e)
         {
             gameEngine.MovePlayer(Character.MovementEnum.Up);
+            txtMap.Text = gameEngine.MapClass.ToString();
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
         }
         private void btnDown_Click(object sender, EventArgs e)
         {
             gameEngine.MovePlayer(Character.MovementEnum.Down);
+            txtMap.Text = gameEngine.MapClass.ToString();
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
+
         }
         private void btnLeft_Click(object sender, EventArgs e)
         {
             gameEngine.MovePlayer(Character.MovementEnum.Left);
+            txtMap.Text = gameEngine.MapClass.ToString();
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
             gameEngine.MovePlayer(Character.MovementEnum.Right);
+            txtMap.Text = gameEngine.MapClass.ToString();
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
         }
 
     }

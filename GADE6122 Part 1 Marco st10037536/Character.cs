@@ -8,7 +8,6 @@ namespace GADE6122_Part_1_Marco_st10037536
 {
     abstract class Character : Tile
     {
-        public bool IsDead = false;
         private int hp;
         private int maxHp;
         private int dmg;
@@ -21,7 +20,7 @@ namespace GADE6122_Part_1_Marco_st10037536
             NoMovement
         }
 
-        string[] TileSight = new string[4];
+        public Tile[] TileSight = new Tile[4];
 
         public Character(int x, int y, int hp, int maxHp, int dmg) : base(x, y)
         {
@@ -47,31 +46,14 @@ namespace GADE6122_Part_1_Marco_st10037536
             set { maxHp = value; }
         }
 
-
-        public bool ChangeTileSight(int Moved, int Move)
-        {
-            switch (Moved)
-            {
-                case (int)MovementEnum.NoMovement:
-                    return false;
-                case (int)MovementEnum.Up:
-                    return true;
-                case (int)MovementEnum.Down:
-                    return true;
-                case (int)MovementEnum.Left:
-                    return true;
-                case (int)MovementEnum.Right:
-                    return true;
-                default:
-                    return false;
-            }
-
-
-        }
-
         public virtual void Attack(Character target)
         {
             target.hp -= this.dmg;
+        }
+
+        public bool IsDead()
+        {
+            return this.hp <= 0;
         }
 
         public virtual bool CheckRange(Character target)

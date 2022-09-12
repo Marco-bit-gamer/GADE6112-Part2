@@ -20,6 +20,21 @@ namespace GADE6122_Part_1_Marco_st10037536
             if (mapClass.HeroProp.ReturnMove(direction) == direction)
             {
                 mapClass.HeroProp.Move(direction);
+                switch (direction)
+                {
+                    case MovementEnum.Up:
+                        MapClass.MapProp[MapClass.HeroProp.Y + 1, MapClass.HeroProp.X] = new EmptyTile(MapClass.HeroProp.Y + 1, MapClass.HeroProp.X);
+                        break;
+                    case MovementEnum.Down:
+                        MapClass.MapProp[MapClass.HeroProp.Y - 1, MapClass.HeroProp.X] = new EmptyTile(MapClass.HeroProp.Y - 1, MapClass.HeroProp.X);
+                        break;
+                    case MovementEnum.Left:
+                        MapClass.MapProp[MapClass.HeroProp.Y, MapClass.HeroProp.X + 1] = new EmptyTile(MapClass.HeroProp.Y, MapClass.HeroProp.X + 1);
+                        break;
+                    case MovementEnum.Right:
+                        MapClass.MapProp[MapClass.HeroProp.Y, MapClass.HeroProp.X - 1] = new EmptyTile(MapClass.HeroProp.Y, MapClass.HeroProp.X - 1);
+                        break;
+                }
                 return true;
             }
             else

@@ -15,28 +15,13 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)
         {
-            switch (move)
-            {
-                case MovementEnum.Up:
-                    return move;
-                    break;
-                case MovementEnum.Down:
-                    return move;
-                    break;
-                case MovementEnum.Left:
-                    return move;
-                    break;
-                case MovementEnum.Right:
-                    return move;
-                    break;
-                default:
-                    return MovementEnum.NoMovement;
-            }
+            if (TileSight[(int)move] is EmptyTile) return move;
+            return MovementEnum.NoMovement;
         }
 
         public override string ToString()
         {
-            string output = "Player Stats: \n HP: HP/Max HP \n Damage: 2 \n [X, Y]";
+            string output = $"Player Stats: \n HP: {HP}/{Max_HP} \n Damage: {Damage} \n [{X}, {Y}]";
             return output;
         }
     }

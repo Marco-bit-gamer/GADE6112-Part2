@@ -35,16 +35,17 @@ namespace GADE6122_Part_1_Marco_st10037536
                 {
                     if ((i == 0 || i == mapHeight - 1) || (j == 0 || j == mapWidth - 1))
                     {
-                        MAP[i, j] = new Obstacle(i, j);
+                        MAP[i, j] = new Obstacle(i, j) { Type = Tile.TileType.Obstacle };
                     }
                     else
                     {
-                        MAP[i, j] = new EmptyTile(i, j);
+                        MAP[i, j] = new EmptyTile(i, j) { Type = Tile.TileType.EmptyTile };
                     }
                 }
             }
             
             hero = (Hero)Create(Tile.TileType.Hero);
+            hero.Type = Tile.TileType.Hero;
             for (int i = 0; i < enemies.Length; i++)
             {
                 Create(Tile.TileType.Enemy);
@@ -54,7 +55,18 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public void UpdateVision()
         {
+            hero.TileSight[0] = MapProp[hero.Y - 1, hero.X];
+            hero.TileSight[1] = MapProp[hero.Y + 1, hero.X];
+            hero.TileSight[2] = MapProp[hero.Y, hero.X - 1];
+            hero.TileSight[3] = MapProp[hero.Y, hero.X + 1];
 
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                enemies[i].TileSight[0] = MapProp[enemies[i].Y - 1, enemies[i].X];
+                enemies[i].TileSight[1] = MapProp[enemies[i].Y + 1, enemies[i].X];
+                enemies[i].TileSight[2] = MapProp[enemies[i].Y, enemies[i].X - 1];
+                enemies[i].TileSight[3] = MapProp[enemies[i].Y, enemies[i].X + 1];
+            }
         }
 
         private Tile Create(Tile.TileType type)
@@ -72,12 +84,12 @@ namespace GADE6122_Part_1_Marco_st10037536
             switch (type)
             {
                 case Tile.TileType.Hero:
-                    Hero theHero = new Hero(randomX, randomY, 100, 100);
+                    Hero theHero = new Hero(randomX, randomY, 100, 100) { Type = Tile.TileType.Hero };
                     MAP[randomY, randomX] = theHero;
                     hero = theHero;
                     return theHero;
                 case Tile.TileType.Enemy:
-                    Swamp_Creature theEnemy = new Swamp_Creature(randomX, randomY);
+                    Swamp_Creature theEnemy = new Swamp_Creature(randomX, randomY) { Type = Tile.TileType.Enemy };
                     MAP[randomY, randomX] = theEnemy;
                     for (int i = 0; i < enemies.Length; i++)
                     {
@@ -95,7 +107,7 @@ namespace GADE6122_Part_1_Marco_st10037536
                 default:
                     break;
             }
-            return new EmptyTile(randomX, randomY);
+            return new EmptyTile(randomX, randomY) { Type = Tile.TileType.EmptyTile };
         }
         public override string ToString()
         {

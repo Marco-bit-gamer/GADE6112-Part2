@@ -15,7 +15,9 @@ namespace GADE6122_Part_1_Marco_st10037536
             Hero,
             Enemy,
             Gold,
-            Weapon
+            Weapon,
+            Obstacle,
+            EmptyTile
         }
 
         public Tile(int x, int y)
@@ -36,21 +38,10 @@ namespace GADE6122_Part_1_Marco_st10037536
             set => y = value;
         }
 
-        public string Symbol(int symbol)
+        public TileType Type
         {
-            switch (symbol)
-            {
-                case (int)TileType.Hero:
-                    return "H";
-                case (int)TileType.Enemy:
-                    return "SC";
-                case (int)TileType.Gold:
-                    return "G";
-                case (int)TileType.Weapon:
-                    return "W";
-                default:
-                    return "";
-            }
+            get;
+            set;
         }
     }
 }
