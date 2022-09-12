@@ -42,18 +42,18 @@
             // 
             this.txtMap.AcceptsTab = true;
             this.txtMap.Font = new System.Drawing.Font("Monospac821 BT", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMap.Location = new System.Drawing.Point(355, 41);
+            this.txtMap.Location = new System.Drawing.Point(270, 41);
             this.txtMap.Multiline = true;
             this.txtMap.Name = "txtMap";
-            this.txtMap.Size = new System.Drawing.Size(400, 378);
+            this.txtMap.Size = new System.Drawing.Size(486, 426);
             this.txtMap.TabIndex = 0;
             this.txtMap.TextChanged += new System.EventHandler(this.txtMap_TextChanged);
             // 
             // infoTextBox
             // 
-            this.infoTextBox.Location = new System.Drawing.Point(780, 378);
+            this.infoTextBox.Location = new System.Drawing.Point(780, 221);
             this.infoTextBox.Name = "infoTextBox";
-            this.infoTextBox.Size = new System.Drawing.Size(291, 314);
+            this.infoTextBox.Size = new System.Drawing.Size(291, 484);
             this.infoTextBox.TabIndex = 1;
             this.infoTextBox.Text = "";
             // 
@@ -67,7 +67,7 @@
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(132, 188);
+            this.btnUp.Location = new System.Drawing.Point(136, 360);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(112, 107);
             this.btnUp.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             // btnLeft
             // 
-            this.btnLeft.Location = new System.Drawing.Point(12, 312);
+            this.btnLeft.Location = new System.Drawing.Point(16, 484);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(112, 107);
             this.btnLeft.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // btnRight
             // 
-            this.btnRight.Location = new System.Drawing.Point(237, 312);
+            this.btnRight.Location = new System.Drawing.Point(241, 484);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(112, 107);
             this.btnRight.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(132, 440);
+            this.btnDown.Location = new System.Drawing.Point(136, 612);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(112, 107);
             this.btnDown.TabIndex = 6;
@@ -109,10 +109,11 @@
             // 
             this.btnAttack.Location = new System.Drawing.Point(780, 91);
             this.btnAttack.Name = "btnAttack";
-            this.btnAttack.Size = new System.Drawing.Size(148, 107);
+            this.btnAttack.Size = new System.Drawing.Size(291, 107);
             this.btnAttack.TabIndex = 7;
             this.btnAttack.Text = "Attack";
             this.btnAttack.UseVisualStyleBackColor = true;
+            this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
             // HvsS
             // 

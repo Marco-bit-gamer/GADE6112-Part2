@@ -17,7 +17,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override string ToString()
         {
-            string EnemyClassName = this.GetType().ToString() + " at [" + X +"," + Y +"] (" + Damage +")";
+            string EnemyClassName = $"Enemy at [{X}, {Y}] ({Damage}) HP: {HP}";
             return EnemyClassName;
         }
     }

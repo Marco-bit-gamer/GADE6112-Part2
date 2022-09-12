@@ -24,6 +24,12 @@ namespace GADE6122_Part_1_Marco_st10037536
         {
             txtMap.Text = gameEngine.MapClass.ToString();
             gameEngine.MapClass.UpdateVision();
+            
+            enemiesDropDown.Items.Clear();
+            for (int i = 0; i < gameEngine.MapClass.EnemiesProp.Length; i++)
+            {
+                enemiesDropDown.Items.Add(gameEngine.MapClass.EnemiesProp[i].ToString());
+            }
         }
 
         private void txtMap_TextChanged(object sender, EventArgs e)
@@ -64,5 +70,26 @@ namespace GADE6122_Part_1_Marco_st10037536
             gameEngine.MapClass.UpdateVision();
         }
 
+        private void btnAttack_Click(object sender, EventArgs e)
+        {
+            if (gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].IsDead())
+            {
+                gameEngine.MapClass.MapProp[
+                    gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].Y,
+                    gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].X
+                    ]
+                    = new EmptyTile(
+                        gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].X,
+                        gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].Y
+                        ) { Type = Tile.TileType.EmptyTile };
+                txtMap.Text = gameEngine.MapClass.ToString();
+                return;
+            }
+            gameEngine.MapClass.HeroProp.Attack(gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex]);
+            infoTextBox.Text = gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].ToString();
+
+
+
+        }
     }
 }
