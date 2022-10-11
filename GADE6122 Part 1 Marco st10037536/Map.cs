@@ -19,7 +19,7 @@ namespace GADE6122_Part_1_Marco_st10037536
         
         Random rand = new Random();
         int mapWidth, mapHeight;
-        public static readonly string HERO = "H", SWAMP_CREATURE = "☻", EMPTY = "_", OBSTACLE = "•";
+        public static readonly string HERO = "H", SWAMP_CREATURE = "SW", EMPTY = "_", OBSTACLE = "•";
 
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyCount)
         {

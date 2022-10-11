@@ -87,6 +87,8 @@ namespace GADE6122_Part_1_Marco_st10037536
                 case MovementEnum.Right:
                     this.X += 1;
                     break;
+                case MovementEnum.NoMovement:
+                    break;
                 default:
                     break;
             }

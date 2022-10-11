@@ -36,6 +36,9 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnAttack = new System.Windows.Forms.Button();
+            this.btnStay = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtMap
@@ -87,7 +90,7 @@
             // 
             // btnRight
             // 
-            this.btnRight.Location = new System.Drawing.Point(241, 484);
+            this.btnRight.Location = new System.Drawing.Point(252, 484);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(112, 107);
             this.btnRight.TabIndex = 5;
@@ -115,11 +118,42 @@
             this.btnAttack.UseVisualStyleBackColor = true;
             this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
             // 
+            // btnStay
+            // 
+            this.btnStay.Location = new System.Drawing.Point(134, 484);
+            this.btnStay.Name = "btnStay";
+            this.btnStay.Size = new System.Drawing.Size(112, 107);
+            this.btnStay.TabIndex = 8;
+            this.btnStay.Text = "Stay";
+            this.btnStay.UseVisualStyleBackColor = true;
+            this.btnStay.Click += new System.EventHandler(this.btnStay_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(62, 50);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(112, 34);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(62, 100);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(112, 34);
+            this.btnLoad.TabIndex = 10;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            // 
             // HvsS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 738);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnStay);
             this.Controls.Add(this.btnAttack);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
@@ -146,5 +180,8 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnAttack;
+        private System.Windows.Forms.Button btnStay;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoad;
     }
 }

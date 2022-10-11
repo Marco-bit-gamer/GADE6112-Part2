@@ -91,5 +91,13 @@ namespace GADE6122_Part_1_Marco_st10037536
 
 
         }
+
+        private void btnStay_Click(object sender, EventArgs e)
+        {
+            gameEngine.MovePlayer(Character.MovementEnum.NoMovement);
+            txtMap.Text = gameEngine.MapClass.ToString();
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
+            gameEngine.MapClass.UpdateVision();
+        }
     }
 }

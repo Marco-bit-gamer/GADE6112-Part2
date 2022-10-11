@@ -35,6 +35,9 @@ namespace GADE6122_Part_1_Marco_st10037536
                     case MovementEnum.Right:
                         MapClass.MapProp[MapClass.HeroProp.Y, MapClass.HeroProp.X - 1] = new EmptyTile(MapClass.HeroProp.Y, MapClass.HeroProp.X - 1) { Type = Tile.TileType.EmptyTile };
                         break;
+                    case MovementEnum.NoMovement:
+                        MapClass.MapProp[MapClass.HeroProp.Y, MapClass.HeroProp.X] = new EmptyTile(MapClass.HeroProp.Y, MapClass.HeroProp.X){ Type = Tile.TileType.EmptyTile };
+                        break;
                 }
                 return true;
             }
