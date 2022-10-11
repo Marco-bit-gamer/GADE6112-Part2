@@ -11,6 +11,8 @@ namespace GADE6122_Part_1_Marco_st10037536
         private int hp;
         private int maxHp;
         private int dmg;
+        private int goldCount;
+
         public enum MovementEnum
         {
             Up,
@@ -22,11 +24,12 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public Tile[] TileSight;
 
-        public Character(int x, int y, int hp, int maxHp, int dmg) : base(x, y)
+        public Character(int x, int y, int hp, int maxHp, int dmg, int goldCount) : base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
             this.dmg = dmg;
+            this.goldCount = goldCount;
             TileSight = new Tile[4];
         }
         public int Damage
@@ -45,6 +48,12 @@ namespace GADE6122_Part_1_Marco_st10037536
         {
             get { return maxHp; }
             set { maxHp = value; }
+        }
+
+        public int GoldCount
+        {
+            get { return goldCount; }
+            set { goldCount = value; }
         }
 
         public virtual void Attack(Character target)
@@ -88,6 +97,19 @@ namespace GADE6122_Part_1_Marco_st10037536
                     this.X += 1;
                     break;
                 case MovementEnum.NoMovement:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void PickUp(Item i)
+        {
+            switch (i)
+            {
+                case Gold:
+                    Gold tmp = (Gold)i;
+                    GoldCount += tmp.AmountGold;
                     break;
                 default:
                     break;

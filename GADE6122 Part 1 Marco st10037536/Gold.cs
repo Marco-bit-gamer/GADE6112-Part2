@@ -8,14 +8,19 @@ namespace GADE6122_Part_1_Marco_st10037536
 {
     internal class Gold : Item
     {
-        private int AmountGold;
-        private Random rnd = new Random();
+        private int amountGold;
+        private Random rnd = new();
 
         public Gold(int x, int y) : base(x, y)
         {
-            EmptyTile.ReferenceEquals(x, y);
-            AmountGold = rnd.Next(1, 6);
+            amountGold = rnd.Next(1, 6);
         }
 
+        public int AmountGold { get => amountGold; set => amountGold = value; }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

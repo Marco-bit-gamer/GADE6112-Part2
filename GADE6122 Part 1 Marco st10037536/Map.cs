@@ -9,19 +9,19 @@ namespace GADE6122_Part_1_Marco_st10037536
     internal class Map
     {
         Tile[,] MAP = new Tile[8, 15];
-        public Tile[,] MapProp { get { return MAP; } }
-
         Hero hero;
-        public Hero HeroProp {  get { return hero; } }
-
         Enemy[] enemies;
-        public Enemy[] EnemiesProp { get { return enemies; } set { enemies = value; } }
-        
+        Item[] items;
         Random rand = new Random();
         int mapWidth, mapHeight;
-        public static readonly string HERO = "H", SWAMP_CREATURE = "SW", EMPTY = "_", OBSTACLE = "•";
+        public static readonly string HERO = "H", SWAMP_CREATURE = "E", EMPTY = "_", OBSTACLE = "•", MAGE = "M", GOLD = "G";
 
-        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyCount)
+
+        public Tile[,] MapProp { get { return MAP; } }
+        public Hero HeroProp {  get { return hero; } }
+        public Enemy[] EnemiesProp { get { return enemies; } set { enemies = value; } }
+
+        public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyCount, int goldCount)
         {
             mapWidth = rand.Next(minWidth, maxWidth);
             mapHeight = rand.Next(minHeight, maxHeight);
@@ -46,10 +46,13 @@ namespace GADE6122_Part_1_Marco_st10037536
             
             hero = (Hero)Create(Tile.TileType.Hero);
             hero.Type = Tile.TileType.Hero;
+            
             for (int i = 0; i < enemies.Length; i++)
             {
                 Create(Tile.TileType.Enemy);
             }
+
+            items = new Item[goldCount];
         }
         
 
@@ -89,19 +92,46 @@ namespace GADE6122_Part_1_Marco_st10037536
                     hero = theHero;
                     return theHero;
                 case Tile.TileType.Enemy:
-                    Swamp_Creature theEnemy = new Swamp_Creature(randomX, randomY) { Type = Tile.TileType.Enemy };
-                    MAP[randomY, randomX] = theEnemy;
-                    for (int i = 0; i < enemies.Length; i++)
+                    if (rand.Next(1) == 0) // 0 is SwampCreature and 1 is Mage
                     {
-                        if (enemies[i] is null)
+                        Swamp_Creature theEnemy = new Swamp_Creature(randomX, randomY) { Type = Tile.TileType.Enemy };
+                        MAP[randomY, randomX] = theEnemy;
+                        for (int i = 0; i < enemies.Length; i++)
                         {
-                            enemies[i] = theEnemy;
+                            if (enemies[i] is null)
+                            {
+                                enemies[i] = theEnemy;
+                                break;
+                            }
+                        }
+                        return theEnemy;
+                    }
+                    else
+                    {
+                        Mage mage = new Mage(randomX, randomY) { Type = Tile.TileType.Enemy };
+                        MAP[randomY, randomX] = mage;
+                        for (int i = 0; i < enemies.Length; i++)
+                        {
+                            if (enemies[i] is null)
+                            {
+                                enemies[i] = mage;
+                                break;
+                            }
+                        }
+                        return mage;
+                    }
+                case Tile.TileType.Gold:
+                    Gold gold = new Gold(randomX, randomY) { Type = Tile.TileType.Gold };
+                    MAP[randomY, randomX] = gold;
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        if (items[i] is null)
+                        {
+                            items[i] = gold;
                             break;
                         }
                     }
-                    return theEnemy;
-                case Tile.TileType.Gold:
-                    break;
+                    return gold;
                 case Tile.TileType.Weapon:
                     break;
                 default:
@@ -129,6 +159,12 @@ namespace GADE6122_Part_1_Marco_st10037536
                             break;
                         case Swamp_Creature:
                             mapStr += SWAMP_CREATURE;
+                            break;
+                        case Mage:
+                            mapStr += MAGE;
+                            break;
+                        case Gold:
+                            mapStr += GOLD;
                             break;
                     }
                     mapStr += " ";

@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace GADE6122_Part_1_Marco_st10037536
 {
-    abstract class Item
+    abstract class Item : Tile
     {
-        private string M = "money";
 
-        public Item(int x, int y) 
+        public Item(int x, int y) : base(x, y)
         {
-            Tile.Equals(x, y);
+
         }
 
-        public override string ToString()
-        {
-            return M;
-        }
+        public abstract override string ToString();
     }
 }
