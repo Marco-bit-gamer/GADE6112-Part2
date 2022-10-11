@@ -11,7 +11,7 @@ namespace GADE6122_Part_1_Marco_st10037536
         Tile[,] MAP = new Tile[8, 15];
         Hero hero;
         Enemy[] enemies;
-        Item[] items;
+        Item?[] items;
         Random rand = new Random();
         int mapWidth, mapHeight;
         public static readonly string HERO = "H", SWAMP_CREATURE = "E", EMPTY = "_", OBSTACLE = "•", MAGE = "M", GOLD = "G";
@@ -139,6 +139,21 @@ namespace GADE6122_Part_1_Marco_st10037536
             }
             return new EmptyTile(randomX, randomY) { Type = Tile.TileType.EmptyTile };
         }
+
+        public Item? GetItemAtPoint(int x, int y)
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i].X == x && items[i].Y == y)
+                {
+                    Item tmp = items[i];
+                    items[i] = null;
+                    return tmp;
+                }
+            }
+            return null;
+        }
+
         public override string ToString()
         {
             string mapStr = "";
