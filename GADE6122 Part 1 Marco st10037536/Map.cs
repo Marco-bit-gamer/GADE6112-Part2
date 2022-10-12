@@ -46,13 +46,17 @@ namespace GADE6122_Part_1_Marco_st10037536
             
             hero = (Hero)Create(Tile.TileType.Hero);
             hero.Type = Tile.TileType.Hero;
-            
+            items = new Item[goldCount];
+
             for (int i = 0; i < enemies.Length; i++)
             {
                 Create(Tile.TileType.Enemy);
             }
-
-            items = new Item[goldCount];
+            for (int i = 0; i < goldCount; i++)
+            {
+                Create(Tile.TileType.Gold);
+            }
+            
         }
         
 
@@ -92,7 +96,7 @@ namespace GADE6122_Part_1_Marco_st10037536
                     hero = theHero;
                     return theHero;
                 case Tile.TileType.Enemy:
-                    if (rand.Next(1) == 0) // 0 is SwampCreature and 1 is Mage
+                    if (rand.Next(2) == 0) // 0 is SwampCreature and 1 is Mage
                     {
                         Swamp_Creature theEnemy = new Swamp_Creature(randomX, randomY) { Type = Tile.TileType.Enemy };
                         MAP[randomY, randomX] = theEnemy;
@@ -134,8 +138,6 @@ namespace GADE6122_Part_1_Marco_st10037536
                     return gold;
                 case Tile.TileType.Weapon:
                     break;
-                default:
-                    break;
             }
             return new EmptyTile(randomX, randomY) { Type = Tile.TileType.EmptyTile };
         }
@@ -144,6 +146,8 @@ namespace GADE6122_Part_1_Marco_st10037536
         {
             for (int i = 0; i < items.Length; i++)
             {
+                if (items[i] is null) continue;
+
                 if (items[i].X == x && items[i].Y == y)
                 {
                     Item tmp = items[i];

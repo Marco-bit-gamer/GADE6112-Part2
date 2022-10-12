@@ -15,13 +15,13 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)
         {
-            return (TileSight[(int)move].Type == TileType.EmptyTile) ? move : MovementEnum.NoMovement;
+            if (move == MovementEnum.NoMovement) return MovementEnum.NoMovement;
+            return (TileSight[(int)move].Type is TileType.EmptyTile or TileType.Gold) ? move : MovementEnum.NoMovement;
         }
 
         public override string ToString()
         {
-            string output = $"Player Stats: \n HP: {HP}/{Max_HP} \n Damage: {Damage} \n [{X}, {Y}]";
-            return output;
+            return $"Player Stats: \n HP: {HP}/{Max_HP} \n Damage: {Damage} \n [{X}, {Y}]\n Gold Amount: {GoldCount}";
         }
     }
 }

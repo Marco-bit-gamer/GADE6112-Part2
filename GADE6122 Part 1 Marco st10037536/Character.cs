@@ -24,12 +24,11 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public Tile[] TileSight;
 
-        public Character(int x, int y, int hp, int maxHp, int dmg, int goldCount) : base(x, y)
+        public Character(int x, int y, int hp, int maxHp, int dmg) : base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
             this.dmg = dmg;
-            this.goldCount = goldCount;
             TileSight = new Tile[4];
         }
         public int Damage
@@ -105,11 +104,12 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public void PickUp(Item i)
         {
+            if (i is null) return;
             switch (i)
             {
                 case Gold:
                     Gold tmp = (Gold)i;
-                    GoldCount += tmp.AmountGold;
+                    goldCount += tmp.AmountGold;
                     break;
                 default:
                     break;
