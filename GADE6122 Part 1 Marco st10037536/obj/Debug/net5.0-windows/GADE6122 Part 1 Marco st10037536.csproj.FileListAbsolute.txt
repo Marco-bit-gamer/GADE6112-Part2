@@ -1,0 +1,18 @@
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.exe
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.deps.json
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.runtimeconfig.json
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.runtimeconfig.dev.json
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.dll
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\bin\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.pdb
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.csproj.AssemblyReference.cache
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122_Part_1_Marco_st10037536.HvsS.resources
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.csproj.GenerateResource.cache
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.AssemblyInfoInputs.cache
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.AssemblyInfo.cs
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.csproj.CoreCompileInputs.cache
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.dll
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\refint\GADE6122 Part 1 Marco st10037536.dll
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.pdb
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\GADE6122 Part 1 Marco st10037536.genruntimeconfig.cache
+C:\Users\smitm\source\repos\GADE6122 Part 1 Marco st10037536\GADE6122 Part 1 Marco st10037536\obj\Debug\net5.0-windows\ref\GADE6122 Part 1 Marco st10037536.dll
