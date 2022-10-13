@@ -19,8 +19,9 @@ namespace GADE6122_Part_1_Marco_st10037536
         public int MapWidth { get { return mapWidth; } }
         public int MapHeight { get { return mapHeight; } }
         public Tile[,] MapProp { get { return MAP; } }
-        public Hero HeroProp {  get { return hero; } }
+        public Hero HeroProp {  get { return hero; } set { hero = value; } }
         public Enemy[] EnemiesProp { get { return enemies; } set { enemies = value; } }
+        public Item?[] Items { get { return items; } set { items = value; } }
 
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyCount, int goldCount)
         {

@@ -8,7 +8,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 {
     internal class Mage : Enemy
     {
-        public Mage(int x, int y) : base(x, y, 5, 5, 5)
+        public Mage(int x, int y, int hp = 5) : base(x, y, hp, 5, 5)
         {
 
         }

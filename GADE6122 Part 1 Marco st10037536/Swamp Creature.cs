@@ -8,7 +8,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 {
     internal class Swamp_Creature : Enemy
     {
-        public Swamp_Creature(int x, int y) : base(x, y, 10, 10, 1)
+        public Swamp_Creature(int x, int y, int hp = 10) : base(x, y, hp, 10, 1)
         {
 
         }
