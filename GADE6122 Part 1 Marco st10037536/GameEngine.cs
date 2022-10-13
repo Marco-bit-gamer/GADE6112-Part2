@@ -10,11 +10,12 @@ namespace GADE6122_Part_1_Marco_st10037536
     internal class GameEngine
     {
         private Map mapClass;
-        public Map MapClass { get { return mapClass; } }
         public GameEngine()
         {
             mapClass = new Map(7, 12, 7, 12, 8, 4);
         }
+        public Map MapClass { get { return mapClass; } }
+
         public bool MovePlayer(MovementEnum direction)
         {
             if (mapClass.HeroProp.ReturnMove(direction) == direction)
