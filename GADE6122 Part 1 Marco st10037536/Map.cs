@@ -58,7 +58,6 @@ namespace GADE6122_Part_1_Marco_st10037536
             }
             
         }
-        
 
         public void UpdateVision()
         {

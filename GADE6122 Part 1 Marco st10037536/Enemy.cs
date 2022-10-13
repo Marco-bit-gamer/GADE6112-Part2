@@ -10,7 +10,7 @@ namespace GADE6122_Part_1_Marco_st10037536
     {
         public Random random = new Random();
 
-        protected Enemy(int x, int y, int hp, int maxHp, int dmg) : base(x, y, 10, 10, 1)
+        protected Enemy(int x, int y, int hp, int maxHp, int dmg) : base(x, y, hp, maxHp, dmg)
         {
 
         }

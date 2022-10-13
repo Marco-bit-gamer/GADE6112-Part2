@@ -57,6 +57,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public virtual void Attack(Character target)
         {
+            if (!CheckRange(target)) return;
             target.hp -= this.dmg;
         }
 
@@ -67,11 +68,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public virtual bool CheckRange(Character target)
         {
-            if (DistanceTo(target) > 1)
-            {
-                return false;
-            }
-            else return true;
+            return (DistanceTo(target) <= 1);
         }
 
         private int DistanceTo(Character target)

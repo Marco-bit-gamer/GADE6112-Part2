@@ -37,37 +37,45 @@ namespace GADE6122_Part_1_Marco_st10037536
 
 
         }
+        private void DirectionHandler(Character.MovementEnum direction)
+        {
+            gameEngine.MovePlayer(direction);
+            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
+            gameEngine.MapClass.UpdateVision();
+
+            gameEngine.MoveEnemies();
+            gameEngine.AttackingEnemies();
+            UpdateMap();
+        }
+
+        private void UpdateMap()
+        {
+            txtMap.Text = gameEngine.MapClass.ToString();
+        }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            gameEngine.MovePlayer(Character.MovementEnum.Up);
-            txtMap.Text = gameEngine.MapClass.ToString();
-            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
-            gameEngine.MapClass.UpdateVision();
+            DirectionHandler(Character.MovementEnum.Up);
 
         }
+
+
         private void btnDown_Click(object sender, EventArgs e)
         {
-            gameEngine.MovePlayer(Character.MovementEnum.Down);
-            txtMap.Text = gameEngine.MapClass.ToString();
-            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
-            gameEngine.MapClass.UpdateVision();
+            DirectionHandler(Character.MovementEnum.Down);
+
 
         }
         private void btnLeft_Click(object sender, EventArgs e)
         {
-            gameEngine.MovePlayer(Character.MovementEnum.Left);
-            txtMap.Text = gameEngine.MapClass.ToString();
-            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
-            gameEngine.MapClass.UpdateVision();
+            DirectionHandler(Character.MovementEnum.Left);
+
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
-            gameEngine.MovePlayer(Character.MovementEnum.Right);
-            txtMap.Text = gameEngine.MapClass.ToString();
-            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
-            gameEngine.MapClass.UpdateVision();
+            DirectionHandler(Character.MovementEnum.Right);
+
         }
 
         private void btnAttack_Click(object sender, EventArgs e)
@@ -89,15 +97,24 @@ namespace GADE6122_Part_1_Marco_st10037536
             infoTextBox.Text = gameEngine.MapClass.EnemiesProp[enemiesDropDown.SelectedIndex].ToString();
 
 
-
+            gameEngine.AttackingEnemies();
+            UpdateMap();
         }
 
         private void btnStay_Click(object sender, EventArgs e)
         {
-            gameEngine.MovePlayer(Character.MovementEnum.NoMovement);
-            txtMap.Text = gameEngine.MapClass.ToString();
-            infoTextBox.Text = gameEngine.MapClass.HeroProp.ToString();
-            gameEngine.MapClass.UpdateVision();
+            DirectionHandler(Character.MovementEnum.NoMovement);
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

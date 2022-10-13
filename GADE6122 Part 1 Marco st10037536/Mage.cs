@@ -20,8 +20,7 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override bool CheckRange(Character target)
         {
-            if (Math.Abs(target.X - this.X) <= 1 && Math.Abs(target.Y - this.Y) <= 1) return true;
-            else return false;
+            return (Math.Abs(target.X - this.X) <= 1 && Math.Abs(target.Y - this.Y) <= 1);
         }
     }
 }

@@ -15,23 +15,38 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         public override MovementEnum ReturnMove(MovementEnum move = MovementEnum.NoMovement)
         {
-            switch (move)
+            bool availableTile = false;
+
+            for (int i = 0; i < TileSight.Length; i++)
             {
-                case MovementEnum.Up:
-                    return move;
+                if (TileSight[i] is EmptyTile)
+                {
+                    availableTile = true;
                     break;
-                case MovementEnum.Down:
-                    return move;
-                    break;
-                case MovementEnum.Left:
-                    return move;
-                    break;
-                case MovementEnum.Right:
-                    return move;
-                    break;
-                default:
-                    return MovementEnum.NoMovement;
+                }
             }
+
+            if (!availableTile) return MovementEnum.NoMovement;
+
+            bool loop;
+            int dir;
+            do
+            {
+                dir = random.Next(4);
+
+                loop = (TileSight[dir] is not EmptyTile or Gold);
+
+            } while (loop);
+
+            //new C# syntax for return switch cases
+            return dir switch
+            {
+                0 => MovementEnum.Up,
+                1 => MovementEnum.Down,
+                2 => MovementEnum.Left,
+                3 => MovementEnum.Right,
+                _ => MovementEnum.NoMovement,
+            };
         }
     }
 }
