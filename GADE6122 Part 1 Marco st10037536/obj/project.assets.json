@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\smitm\\source\\repos\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536.csproj",
+      "projectUniqueName": "C:\\Users\\smitm\\Source\\Repos\\Marco-bit-gamer\\GADE6122-Part2-MarcoSmit-st10037536\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536.csproj",
       "projectName": "GADE6122 Part 1 Marco st10037536",
-      "projectPath": "C:\\Users\\smitm\\source\\repos\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536.csproj",
+      "projectPath": "C:\\Users\\smitm\\Source\\Repos\\Marco-bit-gamer\\GADE6122-Part2-MarcoSmit-st10037536\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536.csproj",
       "packagesPath": "C:\\Users\\smitm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\smitm\\source\\repos\\GADE6122 Part 1 Marco st10037536\\GADE6122 Part 1 Marco st10037536\\obj\\",
+      "outputPath": "C:\\Users\\smitm\\Source\\Repos\\Marco-bit-gamer\\GADE6122-Part2-MarcoSmit-st10037536\\GADE6122 Part 1 Marco st10037536\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
