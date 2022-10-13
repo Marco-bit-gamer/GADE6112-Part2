@@ -16,7 +16,8 @@ namespace GADE6122_Part_1_Marco_st10037536
         int mapWidth, mapHeight;
         public static readonly string HERO = "H", SWAMP_CREATURE = "E", EMPTY = "_", OBSTACLE = "•", MAGE = "M", GOLD = "G";
 
-
+        public int MapWidth { get { return mapWidth; } }
+        public int MapHeight { get { return mapHeight; } }
         public Tile[,] MapProp { get { return MAP; } }
         public Hero HeroProp {  get { return hero; } }
         public Enemy[] EnemiesProp { get { return enemies; } set { enemies = value; } }

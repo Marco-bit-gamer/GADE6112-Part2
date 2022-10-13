@@ -10,9 +10,9 @@ namespace GADE6122_Part_1_Marco_st10037536
     internal class GameEngine
     {
         private Map mapClass;
-        public GameEngine()
+        public GameEngine(int minWidth, int maxWidth, int minHeight, int maxHeight)
         {
-            mapClass = new Map(7, 12, 7, 12, 4, 4);
+            mapClass = new Map(minWidth, maxWidth, minHeight, maxHeight, 4, 4);
         }
         public Map MapClass { get { return mapClass; } }
 

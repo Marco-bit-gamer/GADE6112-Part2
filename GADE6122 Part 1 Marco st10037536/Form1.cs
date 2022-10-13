@@ -17,7 +17,7 @@ namespace GADE6122_Part_1_Marco_st10037536
         public HvsS()
         {
             InitializeComponent();
-            gameEngine = new GameEngine();
+            gameEngine = new GameEngine(7, 12, 7, 12);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -109,7 +109,8 @@ namespace GADE6122_Part_1_Marco_st10037536
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            DataSet dataSet = new DataSet();
+            DataTable dataTable = new DataTable();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
